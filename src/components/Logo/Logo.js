@@ -4,7 +4,7 @@ import Tilt from "react-tilt";
 import Brain from "./brain.png";
 const Logo = () => {
   return (
-    <div>
+    <div class="mt6">
       <Tilt
         className="bg-lightest-blue o-60 br2 shadow-2 mb4"
         options={{ max: 50 }}
