@@ -57,7 +57,7 @@ class App extends Component {
         joined: data.joined
       }
     });
-  }
+  };
 
   calculateFaceLocation = data => {
     const regionBase = data.outputs["0"].data.regions;
@@ -83,7 +83,7 @@ class App extends Component {
   };
 
   onInputChange = event => {
-      this.setState({ input: event.target.value });
+    this.setState({ input: event.target.value });
   };
 
   onSubmit = () => {
@@ -114,7 +114,7 @@ class App extends Component {
               }
             })
             .catch(console.log);
-          }
+        }
         this.displayFaceBox(this.calculateFaceLocation(response));
       })
       .catch(err => console.log(err));
@@ -128,7 +128,7 @@ class App extends Component {
     }
     this.setState({ route: route });
   };
-  
+
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
@@ -140,12 +140,11 @@ class App extends Component {
         />
         {route === "home" ? (
           <div>
-            <Logo />
             <Rank
               name={this.state.user.name}
               entries={this.state.user.entries}
             />
-            <ImageLinkForm           
+            <ImageLinkForm
               onInputChange={this.onInputChange}
               onButtonSubmit={this.onSubmit}
             />
