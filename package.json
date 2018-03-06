@@ -2,6 +2,9 @@
   "name": "facerecognition",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "yarn": "1.5.1"
+  },
   "dependencies": {
     "clarifai": "^2.6.0",
     "react": "^16.2.0",
