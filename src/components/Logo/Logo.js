@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <div>
       <Tilt
-        className="Tilt br2 shadow-2"
+        className="bg-near-white o-60 br2 shadow-2"
         options={{ max: 50 }}
         style={{ height: 200, width: 200 }}
       >
