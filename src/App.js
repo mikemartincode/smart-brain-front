@@ -140,6 +140,7 @@ class App extends Component {
         />
         {route === "home" ? (
           <div>
+            <Logo />
             <Rank
               name={this.state.user.name}
               entries={this.state.user.entries}
