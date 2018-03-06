@@ -14,7 +14,7 @@ const db = knex({
   connection: {
     host: '127.0.0.1',
     user: 'postgres',
-    password: 'U4kkJdYgeY9G',
+    password: process.env.DB,
     database: 'smart-brain',
   },
 });
@@ -46,6 +46,6 @@ app.put('/imageurl', (req, res) => {
   image.handleClarifaiFace(req, res);
 });
 
-app.listen(3000, () => {
-  console.log('App is listening on port 3000 ');
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`App is listening on port ${process.env.PORT}`);
 });
