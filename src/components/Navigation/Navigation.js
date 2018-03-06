@@ -3,10 +3,10 @@ import "./Navigation.css";
 const Navigation = ({ onRouteChange, isSignedIn }) => {
   if (isSignedIn) {
     return (
-      <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+      <nav className="" style={{ display: "flex", justifyContent: "flex-end" }}>
         <p
           onClick={() => onRouteChange("signin")}
-          className="f3 link dim black underline pa3 pointer white"
+          className="f3 fw7 link dim black pr4 underline pointer"
         >
           Sign Out
         </p>
@@ -14,16 +14,16 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     );
   } else {
     return (
-      <nav style={{ display: "flex", justifyContent: "flex-end" }}>
+      <nav className="h3" style={{ display: "flex", justifyContent: "flex-end" }}>
         <p
           onClick={() => onRouteChange("signin")}
-          className="f3 link dim black underline pa3 pointer white"
+          className="f3 fw7 link dim black pr4 underline pointer"
         >
           Sign In
         </p>
         <p
           onClick={() => onRouteChange("register")}
-          className="f3 link dim black underline pa3 pointer white"
+          className="pr4 f3 fw7 link dim black underline pointer"
         >
           Register
         </p>
